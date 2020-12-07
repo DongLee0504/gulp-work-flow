@@ -6,13 +6,18 @@ Usage
   $ gulp-work-flow [input]
 
 Options
-  --foo  Lorem ipsum. [Default: false]
+  serve 启动项目
+  build 打包
+  clean 清除目录
+  --foo 额外配置 [Default: false]
 
 Examples
-  $ gulp-work-flow
-  unicorns
-  $ gulp-work-flow rainbows
-  unicorns & rainbows
+  $ gulp-work-flow serve
+  启动开发服务器
+  $ gulp-work-flow build
+  执行打包
+  $ gulp-work-flow clean
+  清除 dist 和 temp 目录
 `);
 
 foo(cli.input[0], cli.flags);
