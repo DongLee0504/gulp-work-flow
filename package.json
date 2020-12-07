@@ -1,0 +1,81 @@
+{
+  "name": "gulp-work-flow",
+  "version": "0.1.0",
+  "description": "gulp work flow",
+  "homepage": "",
+  "author": {
+    "name": "amanisky",
+    "email": "amanisky@126.com",
+    "url": "http://amanisky.me"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "main": "lib/index.js",
+  "bin": "bin/cli.js",
+  "keywords": [
+    "gulp",
+    "work",
+    "flow"
+  ],
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-config-xo": "^0.27.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^26.1.0",
+    "lec": "^1.0.1",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest",
+    "prepare": "lec bin/cli.js -c LF"
+  },
+  "repository": "amanisky/gulp-work-flow",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "meow": "^3.7.0"
+  }
+}

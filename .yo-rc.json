@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "amanisky",
+      "authorEmail": "amanisky@126.com",
+      "authorUrl": "http://amanisky.me"
+    }
+  }
+}
