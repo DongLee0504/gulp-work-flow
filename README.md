@@ -9,10 +9,10 @@ $ npm install --save gulp-work-flow
 
 ## Usage
 
-```js
-const gulpWorkFlow = require('gulp-work-flow');
-
-gulpWorkFlow('Rainbow');
+```bash
+gulp-work-flow serve
+gulp-work-flow buile
+gulp-work-flow clean
 ```
 ## License
 
