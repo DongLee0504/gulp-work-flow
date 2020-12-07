@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const meow = require("meow");
-const foo = require("..");
-const cli = meow(`
+require("..");
+meow(`
 Usage
   $ gulp-work-flow [input]
 
@@ -19,5 +19,3 @@ Examples
   $ gulp-work-flow clean
   清除 dist 和 temp 目录
 `);
-
-foo(cli.input[0], cli.flags);
