@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 const meow = require("meow");
-require("..")(11111);
-
-meow(`
+const foo = require("..");
+const cli = meow(`
 Usage
   $ gulp-work-flow [input]
 
@@ -15,3 +14,5 @@ Examples
   $ gulp-work-flow rainbows
   unicorns & rainbows
 `);
+
+foo(cli.input[0], cli.flags);
